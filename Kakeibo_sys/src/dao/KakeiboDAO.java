@@ -200,7 +200,7 @@ public class KakeiboDAO {
 
 	}
 
-	public static KakeiboDTO delete(String key){		//ほりゅう
+	public static KakeiboDTO delete(String key){
 		KakeiboDTO result = null;
 
 		Connection con = null;
@@ -214,7 +214,7 @@ public class KakeiboDAO {
 					"root",
 					"Mochi1206");
 
-			String sql = "DELETE FROM games WHERE name = ?";
+			String sql = "DELETE FROM syusihyou WHERE naiyou = ?";
 
 			pstmt = con.prepareStatement(sql);
 

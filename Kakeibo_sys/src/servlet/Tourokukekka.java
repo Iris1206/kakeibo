@@ -36,7 +36,7 @@ public class Tourokukekka extends HttpServlet {
 
 		KakeiboDTO result = null;
 
-		int id = Integer.parseInt(request.getParameter("id"));  //NumberFormatException
+		int id = Integer.parseInt(request.getParameter("id"));
 		String naiyou = request.getParameter("naiyou");
 		int money = Integer.parseInt(request.getParameter("money"));
 		String hantei = request.getParameter("hantei");
@@ -50,7 +50,7 @@ public class Tourokukekka extends HttpServlet {
 
 		String view = "/WEB-INF/view/tourokuResult.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(view);
-		dispatcher.forward(request, response);
+		dispatcher.forward(request, response);   //NullPointerException
 	}
 
 	/**

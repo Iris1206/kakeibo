@@ -14,6 +14,7 @@
 <body>
 
 	<a href="/Kakeibo_sys/Touroku">登録</a>
+	<a href="/Kakeibo_sys/Sakujo">削除</a>
 
 	<h1>家計簿</h1>
 	<table>
