@@ -33,9 +33,10 @@ public class Tourokukekka extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
+
 		KakeiboDTO result = null;
 
-		int id = Integer.parseInt(request.getParameter("id"));
+		int id = Integer.parseInt(request.getParameter("id"));  //NumberFormatException
 		String naiyou = request.getParameter("naiyou");
 		int money = Integer.parseInt(request.getParameter("money"));
 		String hantei = request.getParameter("hantei");
