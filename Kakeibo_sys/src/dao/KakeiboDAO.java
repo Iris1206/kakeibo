@@ -85,14 +85,15 @@ public class KakeiboDAO {
 					"jdbc:mysql://localhost:3306/kakeibo?useSSL=false",
 					"root",
 					"Mochi1206");
-
-			String sql = "SELECT * FROM syusihyou where id = ?";
+//↓この辺
+			String sql = "SELECT * FROM syusihyou where naiyou = ?";
 
 			pstmt = con.prepareStatement(sql);
 
 			pstmt.setString(1, key);
 
 			rs = pstmt.executeQuery();
+//↑この辺
 
 			rs.next();
 
@@ -106,7 +107,7 @@ public class KakeiboDAO {
 
 
 		} catch (SQLException e){
-			System.out.println("DBアクセスに失敗しました。");
+			System.out.println("アクセスに失敗しました。");
 			e.printStackTrace();
 		} catch (Exception e){
 			System.out.println("数字を指定してください。");
