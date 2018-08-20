@@ -215,7 +215,7 @@ public class KakeiboDAO {
 					"root",
 					"Mochi1206");
 
-			String sql = "DELETE FROM syusihyou WHERE naiyou = ?";
+			String sql = "DELETE FROM syusihyou WHERE  = ?";
 
 			pstmt = con.prepareStatement(sql);
 

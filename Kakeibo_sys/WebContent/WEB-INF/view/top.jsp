@@ -13,9 +13,6 @@
 <link rel="stylesheet" href="/Kakeibo_sys/css/style.css" type="text/css">
 <body>
 
-	<a href="/Kakeibo_sys/Touroku">登録</a>
-	<a href="/Kakeibo_sys/Sakujo">削除</a>
-
 	<h1>家計簿</h1>
 	<table>
 		<tr>
@@ -42,7 +39,9 @@
 		<%
 			}
 		%>
-	</table>
+	</table><br>
+
+	<a href="/Kakeibo_sys/Touroku">登録</a>
 
 </body>
 </html>

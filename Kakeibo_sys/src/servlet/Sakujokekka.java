@@ -1,3 +1,5 @@
+//未完により使用不可
+
 package servlet;
 
 import java.io.IOException;
@@ -34,7 +36,7 @@ public class Sakujokekka extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		KakeiboDTO result = null;
 
-		String name = request.getParameter("naiyou");
+		String name = request.getParameter("id");
 
 		result = KakeiboDAO.delete(name);
 		request.setAttribute("del", result);
