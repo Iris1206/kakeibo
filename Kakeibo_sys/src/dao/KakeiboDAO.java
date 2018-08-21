@@ -252,6 +252,132 @@ public class KakeiboDAO {
 
 	}
 
+
+	public static ArrayList<KakeiboDTO> syunyu(){	//テーブル表示
+		ArrayList<KakeiboDTO> resultList = new ArrayList<KakeiboDTO>();
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+
+		try{
+			Class.forName("com.mysql.jdbc.Driver");
+			con = DriverManager.getConnection(
+					"jdbc:mysql://localhost:3306/kakeibo?useSSL=false",
+					"root",
+					"Mochi1206");
+
+			String sql = "SELECT * FROM syusihyou where hantei = '収入'";
+			pstmt = con.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+
+			while(rs.next()){
+				int id = rs.getInt("id");
+				String naiyou = rs.getString("naiyou");
+				int money = rs.getInt("money");
+				String hantei = rs.getString("hantei");
+				int month = rs.getInt("month");
+				int day = rs.getInt("day");
+				resultList.add(new KakeiboDTO(id,naiyou,money,hantei,month,day));
+
+			}
+		} catch (SQLException e){
+			System.out.println("DBアクセスに失敗しました。");
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if( rs != null){
+					rs.close();
+				}
+			} catch(SQLException e){
+				System.out.println("DB切断時にエラーが発生しました。");
+				e.printStackTrace();
+			}
+			try {
+				if( pstmt != null){
+					pstmt.close();
+				}
+			} catch(SQLException e){
+				System.out.println("DB切断時にエラーが発生しました。");
+				e.printStackTrace();
+			}
+			try {
+				if( con != null){
+					con.close();
+				}
+			} catch (SQLException e){
+				System.out.println("DB切断時にエラーが発生しました。");
+				e.printStackTrace();
+			}
+		}
+
+		return resultList;
+
+	}
+	public static ArrayList<KakeiboDTO> sisyutu(){	//テーブル表示
+		ArrayList<KakeiboDTO> resultList = new ArrayList<KakeiboDTO>();
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+
+		try{
+			Class.forName("com.mysql.jdbc.Driver");
+			con = DriverManager.getConnection(
+					"jdbc:mysql://localhost:3306/kakeibo?useSSL=false",
+					"root",
+					"Mochi1206");
+
+			String sql = "SELECT * FROM syusihyou where hantei = '支出'";
+			pstmt = con.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+
+			while(rs.next()){
+				int id = rs.getInt("id");
+				String naiyou = rs.getString("naiyou");
+				int money = rs.getInt("money");
+				String hantei = rs.getString("hantei");
+				int month = rs.getInt("month");
+				int day = rs.getInt("day");
+				resultList.add(new KakeiboDTO(id,naiyou,money,hantei,month,day));
+
+			}
+		} catch (SQLException e){
+			System.out.println("DBアクセスに失敗しました。");
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if( rs != null){
+					rs.close();
+				}
+			} catch(SQLException e){
+				System.out.println("DB切断時にエラーが発生しました。");
+				e.printStackTrace();
+			}
+			try {
+				if( pstmt != null){
+					pstmt.close();
+				}
+			} catch(SQLException e){
+				System.out.println("DB切断時にエラーが発生しました。");
+				e.printStackTrace();
+			}
+			try {
+				if( con != null){
+					con.close();
+				}
+			} catch (SQLException e){
+				System.out.println("DB切断時にエラーが発生しました。");
+				e.printStackTrace();
+			}
+		}
+
+		return resultList;
+
+	}
+
 }
 
 

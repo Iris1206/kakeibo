@@ -1,20 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="dto.KakeiboDTO"%>
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>家計簿</title>
+<title>支出</title>
 </head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="/Kakeibo_sys/css/style.css" type="text/css">
 <body>
-
-	<h1>家計簿</h1>
-	<table>
+<table>
 		<tr>
 			<th>ID</th>
 			<th>内容</th>
@@ -39,12 +34,6 @@
 		<%
 			}
 		%>
-	</table><br>
-
-	<a href="/Kakeibo_sys/Sisyutu_disp">支出</a>
-	<a href="/Kakeibo_sys/Syunyu_disp">収入</a><br><br>
-
-	<a href="/Kakeibo_sys/Touroku">登録</a>
-
+	</table>
 </body>
 </html>
