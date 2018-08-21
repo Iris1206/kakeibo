@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="/Kakeibo_sys/css/style.css" type="text/css">
 <title>登録結果</title>
 </head>
 <body>
@@ -27,6 +28,7 @@
 			<td><%=syu.getDay() %></td>
 		</tr>
 	</table>
+	<p>以上の内容で登録しました。</p>
 
 	<form action="/Kakeibo_sys/Top">
 		<INPUT type="submit" value="戻る">
