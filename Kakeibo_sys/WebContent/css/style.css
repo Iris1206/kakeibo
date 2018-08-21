@@ -1,6 +1,11 @@
+body {
+	background-color: #98FB98;
+}
+
 table {
 	border: 1px solid #666;
 }
+
 table th, td {
 	border-bottom: 1px solid #666;
 }
